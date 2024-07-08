@@ -1,8 +1,10 @@
-import React from 'react'
+import React from 'react';
+
+import { About, Footer, Header, Skills, Testimonial, Work } from './container';
 
 const App = () => {
   return (
-    <div>App</div>
+    <h1>App</h1>
   );
 }
 
