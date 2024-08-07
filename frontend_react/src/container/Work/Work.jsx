@@ -19,15 +19,25 @@ const Work = () => {
 
     client.fetch(query)
       .then((data) => {
-        console.log(data);
         setWorks(data);
         setFilterWork(data);
       })
   }, []);
   
 
-  const handleWorkFilter = () => {
+  const handleWorkFilter = (item) => {
+    setActiveFilter(item);
+    setAnimateCard([{y: 100, opacity: 0}]);
 
+    setTimeout(() => {
+      setAnimateCard([{ y: 0, capacity: 1}]);
+
+      if(item === 'All') {
+        setFilterWork(works);
+      } else {
+        setFilterWork(works.filter((work) => work.tags.includes(item)))
+      }
+    }, 500);
   }
 
   return (
@@ -35,7 +45,7 @@ const Work = () => {
       <h2 className='head-text'>My Creative <span>Portfolio</span> Section</h2>
 
       <div className='app__work-filter'>
-        {['Team Project', ' Individual Project', 'All'].map((item, index) => (
+        {['Frontend', 'Backend', 'Fullstack', 'All'].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
@@ -57,7 +67,8 @@ const Work = () => {
               <img src={urlFor(work.imgUrl)} alt={work.name}/>
 
               <motion.div
-                whileHover={{ opacity: [0, 1] }}
+                initial={{ opacity: 0 }}
+                whileHover={{ opacity: 1 }}
                 transition={{ duration: 0.25, ease:'easeInOut', staggerChildren: 0.5}}
                 className="app__work-hover app__flex"
               >
