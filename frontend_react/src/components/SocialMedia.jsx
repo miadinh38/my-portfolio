@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 
 const SocialMedia = () => {
@@ -23,7 +23,7 @@ const SocialMedia = () => {
           <FaGithub />
         </a>
       </div>
-      <div>
+      {/* <div>
         <a
           href="https://leetcode.com/u/miadinh/"
           target="_blank"
@@ -31,7 +31,7 @@ const SocialMedia = () => {
         >
           <SiLeetcode />
         </a>
-      </div>
+      </div> */}
     </div>
   );
 };
