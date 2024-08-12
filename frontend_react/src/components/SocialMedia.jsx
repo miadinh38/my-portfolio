@@ -1,22 +1,39 @@
-import React from 'react';
-import { BsTwitter, BsInstagram } from 'react-icons/bs';
-import { FaFacebook } from 'react-icons/fa';
-
+import React from "react";
+import { FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
 const SocialMedia = () => {
   return (
     <div className="app__social">
       <div>
-        <BsTwitter />
+        <a
+          href="https://www.linkedin.com/in/miadinh38/"
+          target="_blank"
+          rel="noopener noreferer"
+        >
+          <FaLinkedin />
+        </a>
       </div>
       <div>
-        <BsInstagram />
+        <a
+          href="https://github.com/miadinh38"
+          target="_blank"
+          rel="noopener noreferer"
+        >
+          <FaGithub />
+        </a>
       </div>
       <div>
-        <FaFacebook />
+        <a
+          href="https://leetcode.com/u/miadinh/"
+          target="_blank"
+          rel="noopener noreferer"
+        >
+          <SiLeetcode />
+        </a>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default SocialMedia
+export default SocialMedia;
