@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Tooltip as ReactTooltip } from "react-tooltip";
+import { GrView } from "react-icons/gr";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
@@ -49,6 +50,15 @@ const Skills = () => {
         </motion.div>
 
         <div className="app__skills-exp">
+          <a
+            href="https://flowcv.com/resume/k4pqsjbanm"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GrView />
+            View Resume
+          </a>
+
           {experience?.map((experience) => (
             <motion.div className="app__skills-exp-item" key={experience.year}>
               <div className="app__skills-exp-year">
@@ -79,7 +89,6 @@ const Skills = () => {
                       {work.desc}
                     </ReactTooltip>
                   </>
-
                 ))}
               </motion.div>
             </motion.div>
@@ -91,7 +100,7 @@ const Skills = () => {
 };
 
 export default AppWrap(
-  MotionWrap(Skills, 'app__skills'),
-  'skills',
-  'app__whitebg'
+  MotionWrap(Skills, "app__skills"),
+  "skills",
+  "app__whitebg"
 );
