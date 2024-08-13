@@ -2,6 +2,7 @@
 
 This repository contains the source code for my portfolio website, showcasing my skills and projects as a web developer.
 
+The website is deployed and accessible at https://miadinh.netlify.app.
 
 
 ## Tech Stack & Libraries:
