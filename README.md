@@ -5,7 +5,7 @@ This repository contains the source code for my portfolio website, showcasing my
 
 
 ## Tech Stack & Libraries:
----
+
 <div style="text-align: center;">
   <img src="./frontend_react/src/assets/sanity.png" alt="Sanity" style="width: 50px; height: auto; display: inline-block; margin-right: 10px;" />
   <img src="./frontend_react/src/assets/react.png" alt="React" style="width: 50px; height: auto; display: inline-block; margin-right: 10px;" />
